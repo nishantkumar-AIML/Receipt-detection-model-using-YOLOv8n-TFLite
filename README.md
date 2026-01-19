@@ -27,9 +27,6 @@ I spent some time tuning this model. Even though I had way more examples of "Art
 
 <img width="2400" height="1200" alt="image" src="https://github.com/user-attachments/assets/429c0ff3-ea26-46e3-a7c2-a18488ca7201" />
 
-| Confusion Matrix | Precision-Recall Curve |
-|:---:|:---:|
-| <img src="./images/confusion_matrix.jpg" width="400"> | <img src="./images/PR_curve.png" width="400"> |
 
 > **My observation:** The "Date" field is the hardest part because every receipt writes dates differently, but the model still gets it right most of the time.
 
