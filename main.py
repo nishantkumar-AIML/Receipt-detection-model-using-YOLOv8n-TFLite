@@ -10,14 +10,14 @@ def main():
 
     # 1. Model Check
     if not os.path.exists(MODEL_FILE):
-        print(f"❌ Error: '{MODEL_FILE}' nahi mila!")
-        print("👉 Make sure ye file isi folder mein ho.")
+        print(f"❌ Error: '{MODEL_FILE}' can't find !")
+        print("👉 Make sure this file in this folder .")
         return
 
     # 2. Model Load
     try:
         print(f"📦 Loading {MODEL_FILE}...")
-        # Yahan task='detect' add kiya hai warning hatane ke liye
+        #  task='detect' 
         model = YOLO(MODEL_FILE, task='detect') 
     except Exception as e:
         print(f"❌ Model load error: {e}")
@@ -28,8 +28,8 @@ def main():
     images = [f for f in files if f.lower().endswith(ACCEPTED_EXTENSIONS)]
 
     if not images:
-        print("⚠️ Koi image nahi mili!")
-        print(f"👉 Please ek photo ({ACCEPTED_EXTENSIONS}) folder mein daalo.")
+        print("⚠️ not able to find image !")
+        print(f"👉 Please add photo ({ACCEPTED_EXTENSIONS}) in this folder .")
         return
 
     print(f"📸 Found {len(images)} image(s). Processing...\n")
@@ -37,7 +37,7 @@ def main():
     # 4. Process Images
     for img_file in images:
         print(f"🔎 Scanning: {img_file} ...")
-        # task='detect' yahan bhi explicitly bata diya
+        # task='detect' 
         results = model.predict(img_file, save=True, conf=0.5, task='detect')
         
         for result in results:
@@ -50,7 +50,7 @@ def main():
                 conf = float(box.conf[0])
                 print(f"   ✅ Found: {name} (Confidence: {conf:.2f})")
 
-    print("\n🎉 Done! Results 'runs/detect' folder mein save ho gaye hain.")
+    print("\n🎉 Done! Results 'runs/detect' save in folder .")
 
 if __name__ == "__main__":
     main()
