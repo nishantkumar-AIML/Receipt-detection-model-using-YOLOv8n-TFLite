@@ -49,11 +49,7 @@ results = model.predict('my_receipt.jpg')
 results[0].show()'''
 
 steps to run the program in vs code
-python3.11 -m venv .venv
-source YOUR FILE LOCATION /bin/activate
-python main.py
 
-steps to start the code
 python3.11 -m venv .venv
 
 source venv/bin/activate
