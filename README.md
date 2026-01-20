@@ -46,4 +46,9 @@ model = YOLO('./best.tflite')
 results = model.predict('my_receipt.jpg')
 
 # Show results
-results[0].show()
+results[0].show()'''
+
+steps to run the program in vs code
+python3.11 -m venv .venv
+source YOUR FILE LOCATION /bin/activate
+python main.py
