@@ -52,3 +52,15 @@ steps to run the program in vs code
 python3.11 -m venv .venv
 source YOUR FILE LOCATION /bin/activate
 python main.py
+
+steps to start the code
+python3.11 -m venv .venv
+
+source venv/bin/activate
+
+cd Receipt-detection-model-using-YOLOv8n-TFLite
+
+pip install -r requirements.txt
+
+python main.py
+
